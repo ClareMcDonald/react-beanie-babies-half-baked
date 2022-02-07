@@ -14,18 +14,18 @@ export default function App() {
       <div className='App'>
         <ul>
           <li>
-            <Link to="/beanie-babies">Beanies Page</Link>
+            <Link to="/">Beanies Page</Link>
           </li>
           <li>
             <Link to="beanie-baby">Beanie Detail</Link>
           </li>
         </ul>
         <Switch>
-          <Route path="/beanie-babies">
+          <Route path="/">
             <BeaniesPage />
             {/* this home page route should list all the beanies */}
           </Route>
-          <Route paht="/beanie-baby"> 
+          <Route path="/beanie-baby/id"> 
             {/* this route should point to a particulat beanie baby by id and render that specific BeanieDetail page */}
             <BeanieDetail />
           </Route>

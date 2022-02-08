@@ -21,11 +21,13 @@ function App() {
 
     fetch();
 
+  }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
+
+  useEffect(() => {
     const filteredBeaniesBabies = beanieBabies.filter(beanie => beanie.title.includes(searchQuery));
     setFilteredBeanies(filteredBeaniesBabies);
 
-  }, [page, searchQuery, beanieBabies]); // what can you do with this array to trigger a fetch every time the page changes?
-
+  })
   return (
     <>
       <h3>Search (on type)</h3>
@@ -40,7 +42,7 @@ function App() {
       </div>
       {/* pass the beanie babies into the BeaniesList component */}
       <BeaniesList
-        beanieBabies={filteredBeanies.length 
+        beanieBabies={searchQuery.length 
           ? filteredBeanies
           : beanieBabies}/>
     </>

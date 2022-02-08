@@ -14,7 +14,7 @@ function App() {
     async function fetch() {
       const from = page * perPage - perPage;
       const to = page * perPage;
-      const beanies = await getBeanieBabies(from, to, searchQuery);
+      const beanies = await getBeanieBabies(from, to);
     
       setBeanieBabies(beanies);
     }
@@ -27,7 +27,8 @@ function App() {
     const filteredBeaniesBabies = beanieBabies.filter(beanie => beanie.title.includes(searchQuery));
     setFilteredBeanies(filteredBeaniesBabies);
 
-  })
+  }, [searchQuery, beanieBabies]);
+
   return (
     <>
       <h3>Search (on type)</h3>

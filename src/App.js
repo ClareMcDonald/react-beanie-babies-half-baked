@@ -11,14 +11,6 @@ export default function App() {
   return (
     <Router>
       <div className='App'>
-        {/* <ul>
-          <li>
-            <Link to="/">Beanies Page</Link>
-          </li>
-          <li>
-            <Link to="beanie-baby">Beanie Detail</Link>
-          </li>
-        </ul> */}
         <Switch>
           <Route exact path="/">
             <BeaniesPage />

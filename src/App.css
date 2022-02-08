@@ -58,3 +58,9 @@ body {
 img {
   width: 200px;
 }
+
+.beanie-baby {
+  border: solid 8px pink;
+  border-radius: 15px;
+  padding: 10px;
+}
